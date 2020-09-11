@@ -436,7 +436,165 @@ transform: translateY(-10px);
     padding: 5px;
     margin:10px 0;
   }
+.requisitos{
+    padding: 0 50px;
+    height: 155vh;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  width: 100%;
+  counter-reset: list;
+  background: #fff;
+}
+  dl {
+    height: 40vh;
+    max-width: 70vh;
+    width: 100%;
+    align-self: center;
+    box-sizing: border-box;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    background: -webkit-gradient(linear, left top, right top, color-stop(80%, #fff), to(transparent));
+    background: linear-gradient(to right, #fff 80%, transparent);
+    box-shadow: -5px 5px 5px 0px rgba(153, 153, 153, 0.05);
+    -webkit-transition: box-shadow 0.3s ease-out;
+    transition: box-shadow 0.3s ease-out;
+  }
+  dl:nth-child(even) {
+    margin-left: 20px;
+  }
+  dl:nth-child(odd) {
+    margin-right: 20px;
+  }
+  dl:hover {
+    box-shadow: 0px 5px 0px 0px rgba(153, 153, 153, 0);
+  }
+  dl:hover:before {
+    margin-left: 10px;
+  }
+  dl:before {
+    counter-increment: list;
+    content: counter(list);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 60vh;
+    color: #f12f1f;
+    font-weight: bold;
+    margin-left: -35px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translatey(-52%);
+            transform: translatey(-52%);
+    -webkit-transition: margin 0.2s ease-out;
+    transition: margin 0.2s ease-out;
+  }
+  
+  dt {
+    color: burlywood;
+    font-size: 3.5vh;
+    position: absolute;
+    left: 45%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) rotatez(-90deg);
+            transform: translate(-50%, -50%) rotatez(-90deg);
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  
+  dd {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+    height: 100%;
+    max-width: 45%;
+    margin-left: 55%;
+    padding: 5px;
+    color: #999;
+    font-size: 2.3vh;
+  }
+/**********************/
+  .container_login{
+    
+        position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background: #fff;
+}
+  .form{
+    
+    position: relative;
+    width: 350px;
+    padding: 40px 40px 60px;
+    background: #ebf5fc;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: -5px -5px 10px rgba(0, 0, 0, 0.1),
+                5px 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    .form h2{
+        color: #32a3b1;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+    .form .input{
+        text-align: left;
+        margin-top: 40px;
+    }
+    .form .input .inputBox{
+        margin-top: 20px;
+    }
 
+.form .input .inputBox label{
+       display: block;
+       color: #868686;
+       margin-bottom: 5px;
+       font-size:18px;
+    }
+    .form .input .inputBox input{
+        width: 100%;
+        height: 50px;
+        background:#ebf5fc;
+        border: none;
+        outline: none;
+        border-radius: 40px;
+        padding: 5px 15px;
+        font-size: 18px;
+        color: #32a3b1;
+        box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 1),
+         inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .form .input .inputBox input[type="submit"]{
+        margin-top: 20px;
+        box-shadow:  -2px -2px 6px rgba(255, 255, 255, 1),
+         2px 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .form .input .inputBox input[type="submit"]:active{
+        color: #006c9c;
+        margin-top: 20px;
+        box-shadow: inset -2px -2px 6px rgba(255, 255, 255, 1),
+       inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .form .input .inputBox input::placeholder{
+        color: #555;
+        font-size: 18px;
+    }
+    .forget{
+        margin-top: 30px;
+        color: #555;
+    }
+    .forget a{
+        color: #ff0047;
+    }
+    
 /*
 section .wave:after{
     content: '';
