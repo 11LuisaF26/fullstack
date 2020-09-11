@@ -1,9 +1,10 @@
 # Clonar repositorio
-git clone ...
-cd proyecto
+git clone https://github.com/11LuisaF26/fullstack
+cd fullstack
 
 # Crear entorno virtual
 python -m venv env
+cd env/Scripts/activate
 
 #Instalar requerimientos
 pip3 install -r requerimientos.txt
