@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+
+<head>
+  <!-- Site Title-->
+  <title>Registro Parejas</title>
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport"
+    content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+
+  <!-- Stylesheets-->
+  <link rel="stylesheet" href="../static/css/bootstrap.css">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="stylesheet" href="../static/css/fonts.css">
+  <style>
+    .ie-panel {
+      display: none;
+      background: #8b5151;
+      padding: 10px 0;
+      box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, .3);
+      clear: both;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    html.ie-10 .ie-panel,
+    html.lt-ie-10 .ie-panel {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Page-->
+  <div class="page">
+
+    <header class="page-header">
+      <!-- RD Navbar-->
+      <div class="rd-navbar-wrap">
+        <nav class="rd-navbar rd-navbar-default" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed"
+          data-sm-device-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed"
+          data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-static"
+          data-lg-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xl-layout="rd-navbar-static"
+          data-xxl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-stick-up-clone="false"
+          data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true" data-md-stick-up-offset="115px"
+          data-lg-stick-up-offset="35px">
+          <!-- RD Navbar Top Panel-->
+
+          <div class="rd-navbar-inner rd-navbar-search-wrap">
+            <!-- RD Navbar Panel-->
+            <div class="rd-navbar-panel rd-navbar-search-lg_collapsable">
+              <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+              <!-- RD Navbar Brand-->
+              <div class="rd-navbar-brand"><a class="brand-name" href="{% url 'home' %}"><img src="../static/images/pngguru.com.png"
+                    alt="" width="80px" height="33" /></a></div>
+            </div>
+            <!-- RD Navbar Nav-->
+            <div class="rd-navbar-nav-wrap rd-navbar-search_not-collapsable">
+              <div class="rd-navbar-search_collapsable">
+                <ul class="rd-navbar-nav">
+                  <li><a href="{% url 'home' %}">Home</a>
+                  </li>
+                  <li><a href="#">Pecados capitales</a>
+                  </li>
+                  <li><a href="#">Caballeros sacros</a>
+                  </li>
+                  <li><a href="{% url 'lugar' %}">Lugares</a>
+                  </li>
+                  <li><a href="{% url 'pareja' %}">Parejas</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- Parallax header-->
+    <section>
+      <section class="section parallax-container context-dark" data-parallax-img="../static/images/fondo.jpg">
+        <div class="parallax-content parallax-header">
+          <div class="parallax-header__inner context-dark">
+            <div class="parallax-header__content">
+              <div class="container">
+                <div class="row justify-content-sm-center">
+                  <div class="col-md-10 col-xl-8">
+                    <h2 class="heading-decorated">Registro de Parejas</h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </section>
+    <section class="section-md bg-default decor-text" data-content="Contact">
+      <div class="container text-center">
+        <div class="row row-60">
+          <div class="col-md-7 col-lg-12">
+
+            <!--FORMULARIO-->
+            <form class="rd-mailform rd-mailform_style-1 form-shadow" method="post" action="">
+              <div class="form-wrap form-wrap_icon linear-icon-man">
+                <input class="form-input" id="contact-name" type="text" name="name" data-constraints="@Required">
+                <label class="form-label" for="contact-name">Nombre</label>
+              </div>
+              <div class="form-wrap form-wrap_icon linear-icon fa-gratipay">
+                <input class="form-input" id="pareja" type="text" name="name" data-constraints="@Required">
+                <label class="form-label" for="pareja">Pareja</label>
+              </div>
+             
+              <button class="button button-primary button-shadow" type="submit">send</button>
+            </form>
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Page Footer-->
+    
+
+    <footer class="footer-corporate bg-gray-darkest">
+      <div class="container">
+        <div class="footer-corporate__inner">
+          <p class="rights"><span>Element</span><span>&nbsp;</span><span class="copyright-year"></span>. All Rights
+            Reserved. Design by <a href="https://www.templatemonster.com">TemplateMonster</a></p>
+          <ul class="list-inline-xxs">
+            <li><a class="icon icon-xxs icon-primary fa fa-facebook" href="#"></a></li>
+            <li><a class="icon icon-xxs icon-primary fa fa-twitter" href="#"></a></li>
+            <li><a class="icon icon-xxs icon-primary fa fa-google-plus" href="#"></a></li>
+            <li><a class="icon icon-xxs icon-primary fa fa-vimeo" href="#"></a></li>
+            <li><a class="icon icon-xxs icon-primary fa fa-youtube" href="#"></a></li>
+            <li><a class="icon icon-xxs icon-primary fa fa-pinterest" href="#"></a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- Global Mailform Output-->
+  <div class="snackbars" id="form-output-global"></div>
+  <!-- Javascript-->
+  <script src="../static/js/core.min.js"></script>
+  <script src="../static/js/script.js"></script>
+</body>
+
+</html>
