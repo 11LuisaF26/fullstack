@@ -3,7 +3,7 @@
 
 <head>
     <!-- Site Title-->
-    <title>parejas</title>
+    <title>Peleas</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport"
         content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -56,7 +56,7 @@
                             <button class="rd-navbar-toggle"
                                 data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                             <!-- RD Navbar Brand-->
-                            <div class="rd-navbar-brand"><a class="brand-name" href="home"><img
+                            <div class="rd-navbar-brand"><a class="brand-name" href="{% url 'home' %}"><img
                                         src="../static/images/pngguru.com.png" alt="" width="80px" height="33" /></a></div>
                         </div>
                         <!-- RD Navbar Nav-->
@@ -65,13 +65,13 @@
                                 <ul class="rd-navbar-nav">
                                     <li><a href="{% url 'home' %}">Pecados Capitales</a>
                                     </li>
-                                    <li><a href="{% url 'pelea' %}">Peleas</a>
+                                    <li class="active"><a href="{% url 'pelea' %}">Peleas</a>
                                     </li>
                                     <li><a href="{% url 'caballero' %}">Caballeros sacros</a>
                                     </li>
                                     <li><a href="{% url 'lugar' %}">Lugares</a>
                                     </li>
-                                    <li class="active"><a href="{% url 'pareja' %}">Parejas</a></li>
+                                    <li><a href="{% url 'pareja' %}">Parejas</a></li>
                                   </ul>
                             </div>
                         </div>
@@ -88,7 +88,7 @@
                             <div class="container">
                                 <div class="row justify-content-sm-center">
                                     <div class="col-md-10 col-xl-8">
-                                        <h2 class="heading-decorated">Pareja</h2>
+                                        <h2 class="heading-decorated">Peleas</h2>
                                     </div>
                                 </div>
                             </div>
@@ -108,8 +108,8 @@
                             <thead>
                                 <tr>
                                     <th>#</th>
-                                    <th>pareja 1</th>
-                                    <th>pareja 2</th>
+                                    <th>Peleador 1</th>
+                                    <th>Peleador 2</th>
                                     
                                 </tr>
                             </thead>
@@ -134,8 +134,8 @@
                                 </tr>
                             </tbody>
                         </table>
-                        <a href="{% url 'registrarPareja' %}"><button class="button button-primary button-shadow"
-                                type="submit">Registrar nueva pareja</button></a>
+                        <a href="{% url 'registrarPelea' %}"><button class="button button-primary button-shadow"
+                                type="submit">Registrar nueva Pelea</button></a>
                     </div>
 
                 </div>

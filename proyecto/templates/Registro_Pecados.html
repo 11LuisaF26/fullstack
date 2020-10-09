@@ -3,17 +3,17 @@
 
 <head>
   <!-- Site Title-->
-  <title>Registro lugares</title>
+  <title>Registro Pecados</title>
   <meta name="format-detection" content="telephone=no">
   <meta name="viewport"
     content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta charset="utf-8">
-  
+
   <!-- Stylesheets-->
   <link rel="stylesheet" href="../static/css/bootstrap.css">
-    <link rel="stylesheet" href="../static/css/style.css">
-    <link rel="stylesheet" href="../static/css/fonts.css">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <link rel="stylesheet" href="../static/css/fonts.css">
   <style>
     .ie-panel {
       display: none;
@@ -36,6 +36,7 @@
 <body>
   <!-- Page-->
   <div class="page">
+
     <header class="page-header">
       <!-- RD Navbar-->
       <div class="rd-navbar-wrap">
@@ -77,16 +78,15 @@
       </div>
     </header>
     <!-- Parallax header-->
-
     <section>
-      <section class="section parallax-container context-dark" data-parallax-img="../static/images/parallax-1.jpg">
+      <section class="section parallax-container context-dark" data-parallax-img="../static/images/full_image_2.jpg">
         <div class="parallax-content parallax-header">
           <div class="parallax-header__inner context-dark">
             <div class="parallax-header__content">
               <div class="container">
                 <div class="row justify-content-sm-center">
                   <div class="col-md-10 col-xl-8">
-                    <h2 class="heading-decorated">Registro de lugares</h2>
+                    <h2 class="heading-decorated">Registro de Pecados</h2>
                   </div>
                 </div>
               </div>
@@ -99,44 +99,39 @@
     <section class="section-md bg-default decor-text" data-content="Contact">
       <div class="container text-center">
         <div class="row row-60">
-          <div class="col-md-11 col-lg-12">
-       
+          <div class="col-md-7 col-lg-12">
 
+            <!--FORMULARIO-->
+            <form class="rd-mailform rd-mailform_style-1 form-shadow" method="post" action="">
+              <div class="form-wrap form-wrap_icon linear-icon-man">
+                <input class="form-input" id="contact-name" type="text" name="name" data-constraints="@Required">
+                <label class="form-label" for="contact-name">Nombre</label>
+              </div>
+              <div class="form-wrap form-wrap_icon linear-icon-man">
+                <input class="form-input" id="Pecado" type="text" name="name" data-constraints="@Required">
+                <label class="form-label" for="Pecado">Pecado</label>
+              </div>
 
-            <!-- CUESTIONARIO -->
-
-            <form class="rd-mailform rd-mailform_style-1 form-shadow"  method="post" action="">
-              <div class="form-wrap form-wrap_icon linear-icon-map">
-                <input class="form-input" id="name" type="text" name="name" >
-                <label class="form-label" for="name">Nombre del lugar</label>
+              <div class="form-wrap form-wrap_icon linear-icon fa-gratipay">
+                <input class="form-input" id="poder" type="text" name="name" data-constraints="@Required">
+                <label class="form-label" for="poder">Poder</label>
               </div>
               <div class="form-group form-wrap">
-                <label >Foto del lugar</label>
+                <label >foto</label>
                 <input class="form-control-file" id="foto" type="file" name="name" >
                 
               </div>
-              <div class="form-wrap form-wrap_icon linear-icon-man">
-                <input class="form-input" id="pelea" type="text" name="pelea">
-                <label class="form-label" for="pelea">Pelea</label>
-              </div>
-              <div class="form-group form-wrap">
-                <label >Foto de la pelea</label>
-                <input class="form-control-file" id="fotopelea" type="file" name="name">
-                
-              </div>
-              <button class="button button-primary button-shadow" type="submit">Registrar</button>
+              <button class="button button-primary button-shadow" type="submit">send</button>
             </form>
 
 
-            
+
           </div>
         </div>
       </div>
     </section>
     <!-- Page Footer-->
     
-
-
 
     <footer class="footer-corporate bg-gray-darkest">
       <div class="container">
