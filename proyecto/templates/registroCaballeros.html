@@ -3,7 +3,7 @@
 
 <head>
   <!-- Site Title-->
-  <title>Registro Parejas</title>
+  <title>Registro caballeros</title>
   <meta name="format-detection" content="telephone=no">
   <meta name="viewport"
     content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -65,11 +65,7 @@
                   </li>
                   <li><a href="{% url 'pelea' %}">Peleas</a>
                   </li>
-<<<<<<< HEAD
                   <li><a href="{% url 'caballero' %}">Caballeros sacros</a>
-=======
-                  <li><a href="{% url 'caballeros' %}">Caballeros sacros</a>
->>>>>>> 918675d... Octubre 15
                   </li>
                   <li><a href="{% url 'lugar' %}">Lugares</a>
                   </li>
@@ -83,14 +79,14 @@
     </header>
     <!-- Parallax header-->
     <section>
-      <section class="section parallax-container context-dark" data-parallax-img="../static/images/fondo.jpg">
+      <section class="section parallax-container context-dark" data-parallax-img="../static/images/fondos.jpg">
         <div class="parallax-content parallax-header">
           <div class="parallax-header__inner context-dark">
             <div class="parallax-header__content">
               <div class="container">
                 <div class="row justify-content-sm-center">
                   <div class="col-md-10 col-xl-8">
-                    <h2 class="heading-decorated">Registro de Parejas</h2>
+                    <h2 class="heading-decorated">Registro de Caballeros</h2>
                   </div>
                 </div>
               </div>
@@ -104,20 +100,35 @@
       <div class="container text-center">
         <div class="row row-60">
           <div class="col-md-7 col-lg-12">
-          
+
             <!--FORMULARIO-->
-            <form class="rd-mailform rd-mailform_style-1 form-shadow" method="post" action="{% url 'registrarPareja'%}">
-              {% csrf_token %}  
+            <form class="rd-mailform rd-mailform_style-1 form-shadow" method="post" enctype="multipart/form-data">
+              {% csrf_token %}      
+
               <div class="form-wrap form-wrap_icon linear-icon-man">
-                <input class="form-input" id="pareja1" type="text" name="pareja1" data-constraints="@Required"{{form.pareja1}}>
-                <label class="form-label" for="pareja1">Nombre</label>
+                <input class="form-input" id="nombre" type="text" name="nombre" data-constraints="@Required"{{form.nombre}}
+                <label class="form-label" for="nombre">Nombre</label>
               </div>
+              <div class="form-group form-wrap">
+                <label >Rango</label>
+                <select class="form-input" name="rango" id="rango" {{form.rango}}>
+                  <option value="Seleccionar">Seleccionar</option> 
+                  <option value="Aprendiz de caballero sacro">Aprendiz de caballero sacro</option> 
+                  <option value="Caballero sacro">Caballero sacro</option>
+                  <option value="Gran caballero sacro">Gran caballero sacro</option>
+               </select>
+               
+              </div>
+
               <div class="form-wrap form-wrap_icon linear-icon fa-gratipay">
-                <input class="form-input" id="pareja2" type="text" name="pareja2" data-constraints="@Required"{{form.pareja2}}>
-                <label class="form-label" for="pareja2">Pareja</label>
-              </div>
-             
-              <button class="button button-primary button-shadow" type="submit">Guardar</button>
+                <input class="form-input" id="poder" type="text" name="poder" data-constraints="@Required" {{form.poder}}
+                <label class="form-label" for="poder">Poder</label>
+              </div><br>
+              
+                <label >Foto</label><br>
+                {{form.imagen}}                
+                <br>
+              <button class="button button-primary button-shadow" type="submit">send</button>
             </form>
 
 

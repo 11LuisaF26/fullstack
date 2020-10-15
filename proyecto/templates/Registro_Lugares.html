@@ -99,31 +99,36 @@
     <section class="section-md bg-default decor-text" data-content="Contact">
       <div class="container text-center">
         <div class="row row-60">
-          <div class="col-md-11 col-lg-12">
-       
-
+          <div class="col-md-11 col-lg-12">      
+            
 
             <!-- CUESTIONARIO -->
-
-            <form class="rd-mailform rd-mailform_style-1 form-shadow"  method="post" action="">
+            
+            <form class="rd-mailform rd-mailform_style-1 form-shadow"  method="post"  enctype="multipart/form-data">
+              {% csrf_token %}  
+              <!-- {{ form.as_p }} -->
               <div class="form-wrap form-wrap_icon linear-icon-map">
-                <input class="form-input" id="name" type="text" name="name" >
-                <label class="form-label" for="name">Nombre del lugar</label>
-              </div>
-              <div class="form-group form-wrap">
-                <label >Foto del lugar</label>
-                <input class="form-control-file" id="foto" type="file" name="name" >
+                <input class="form-input" id="nombre" type="text" name="nombre" {{form.nombre}}
+                <label class="form-label" for="nombre">Nombre del lugar</label>
+              </div> <br>
+
+              <label >Foto del lugar</label><br><br>
+              <!-- <div class="form-group form-wrap">
                 
-              </div>
+                <input class="form-control-file" id="imagen1" type="file" name="name" > --> {{form.imagen1}}
+                
+              <!-- </div> -->
               <div class="form-wrap form-wrap_icon linear-icon-man">
-                <input class="form-input" id="pelea" type="text" name="pelea">
+                <input class="form-input" id="pelea" type="text" name="pelea" {{form.pelea}}
                 <label class="form-label" for="pelea">Pelea</label>
-              </div>
-              <div class="form-group form-wrap">
-                <label >Foto de la pelea</label>
-                <input class="form-control-file" id="fotopelea" type="file" name="name">
+              </div> <br>
+
+              <label >Foto de la pelea</label><br>
+              <!-- <div class="form-group form-wrap">
                 
-              </div>
+                <input class="form-control-file" id="imagen2" type="file" name="name">
+                
+              </div> -->{{form.imagen2}}<br>
               <button class="button button-primary button-shadow" type="submit">Registrar</button>
             </form>
 

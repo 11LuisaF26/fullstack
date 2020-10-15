@@ -115,28 +115,26 @@
                                     <th>Foto Pelea</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <th>1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                    <td>Otto</td>
-                                </tr>
-                                <tr>
-                                    <th>2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                    <td>Otto</td>
-                                </tr>
-                                <tr>
-                                    <th>3</th>
-                                    <td>Larry </td>
-                                    <td>Bird</td>
-                                    <td>@twitter</td>
-                                    <td>Otto</td>
-                                </tr>
+                            <tbody>                                
+                                {% for lugar in lugares %}
+                                <tr> 
+                                    <td>{{ forloop.counter }}</td>
+                                    <td>{{lugar.nombre}} </td>
+                                    {%if lugar.imagen1 != None%}
+                                        <td><img src="{{lugar.imagen1.url}}" width="100" height="100"> </td> 
+                                    {% endif %} 
+                                    <td>{{lugar.pelea}} </td>
+                                    <td><img src="{{lugar.imagen2.url}}" width="100" height="100"> </td> 
+                                    <td>                                        
+                                        <form action="{% url 'eliminar_lugar' lugar.id %}" method="POST" class="d-inline">
+                                            {% csrf_token %}
+                                            <button type="submit" class="btn">
+                                                <i class="far fa-trash-alt fa-lg text-danger float-right"></i>
+                                            </button>                                            
+                                        </form>                                                
+                                    </td>                                        
+                                <tr>                                   
+                                {% endfor %}                                  
                             </tbody>
                         </table>
                         <a href="{% url 'registrarLugar' %}"><button class="button button-primary button-shadow"

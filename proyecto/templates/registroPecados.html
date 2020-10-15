@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en">
+  <head>
+    <!-- Site Title-->
+    <title>Nanatzu no taizai</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/Logo.png" type="image/x-icon">
+    <!-- Stylesheets-->
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/fonts.css">
+    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+  </head>
+  <body>
+    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div class="preloader">
+      <div class="cssload-container">
+        <svg class="filter" version="1.1">
+          <defs>
+            <filter id="gooeyness">
+              <fegaussianblur in="SourceGraphic" stddeviation="10" result="blur"></fegaussianblur>
+              <fecolormatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" result="gooeyness"></fecolormatrix>
+              <fecomposite in="SourceGraphic" in2="gooeyness" operator="atop"></fecomposite>
+            </filter>
+          </defs>
+        </svg>
+        <div class="dots">
+          <div class="dot mainDot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <p>Loading...</p>
+      </div>
+    </div>
+    <!-- Page-->
+    <div class="page">
+      <header class="page-header">
+          <h2>Registro de Pecados</h2>
+      </header>
+      <!-- Our Services-->
+      <section class="section-md bg-default text-center decor-text" id="features" data-content="Pecados">
+        <div class="bg-decor d-flex align-items-center" data-parallax-scroll="{&quot;x&quot;: 80,  &quot;smoothness&quot;: 30}"><img src="images/bg-decor-4.png" alt=""/>
+        </div>
+        <div class="container">
+          <h4 class="heading-decorated">Registrar Pecado</h4>
+        </div>
+        <div class= align="center">
+            <form action="" method="post">
+                <label for="Nombre">Nombre:</label><input id="Nombre" type="text" name="Nombre"></br>
+                <label for="Pecado">Pecado:</label><input id="Pecado" type="text" name="Pecado"></br>
+                <label for="Poder">Poder:</label><input id="Poder" type="number" name="Poder"></br>
+                <label for="Foto">Foto:</label><input id="Foto" type="file" name="Foto"></br>
+                <a class="button button-black button-shadow" href="index.html" style="margin: 10px">Cancelar</a><input class="button button-black button-shadow" type="submit" value="Guardar">
+            </form>
+        </div>
+      </section>
+      <footer class="footer-corporate bg-gray-darkest">
+        <div class="container">
+          <div class="footer-corporate__inner">
+            <p class="rights"><span>Element</span><span>&nbsp;</span><span class="copyright-year"></span>. All Rights Reserved. Design by <a href="https://www.templatemonster.com">TemplateMonster</a></p>
+            <ul class="list-inline-xxs">
+              <li><a class="icon icon-xxs icon-primary fa fa-facebook" href="#"></a></li>
+              <li><a class="icon icon-xxs icon-primary fa fa-twitter" href="#"></a></li>
+              <li><a class="icon icon-xxs icon-primary fa fa-google-plus" href="#"></a></li>
+              <li><a class="icon icon-xxs icon-primary fa fa-vimeo" href="#"></a></li>
+              <li><a class="icon icon-xxs icon-primary fa fa-youtube" href="#"></a></li>
+              <li><a class="icon icon-xxs icon-primary fa fa-pinterest" href="#"></a></li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="container">
+      <h4 class="heading-decorated">7 PECADOS CAPITALES</h4>
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"></div>
+    <!-- Javascript-->
+    <script src="js/core.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
