@@ -60,22 +60,18 @@
             <!-- RD Navbar Nav-->
             <div class="rd-navbar-nav-wrap rd-navbar-search_not-collapsable">
               <div class="rd-navbar-search_collapsable">
-                <ul class="rd-navbar-nav">
-                  <li><a href="{% url 'home' %}">Pecados Capitales</a>
-                  </li>
-                  <li><a href="{% url 'pelea' %}">Peleas</a>
-                  </li>
-<<<<<<< HEAD
-                  <li><a href="{% url 'caballero' %}">Caballeros sacros</a>
-=======
-                  <li><a href="{% url 'caballeros' %}">Caballeros sacros</a>
->>>>>>> 918675d... Octubre 15
-                  </li>
-                  <li><a href="{% url 'lugar' %}">Lugares</a>
-                  </li>
-                  <li><a href="{% url 'pareja' %}">Parejas</a></li>
-                </ul>
-              </div>
+                  <ul class="rd-navbar-nav">
+                      <li><a href="{% url 'home' %}">Pecados Capitales</a>
+                      </li>
+                      <li><a href="{% url 'pelea' %}">Peleas</a>
+                      </li>
+                      <li><a href="{% url 'caballero' %}">Caballeros sacros</a>
+                      </li>
+                      <li><a href="{% url 'lugar' %}">Lugares</a>
+                      </li>
+                      <li class="active"><a href="{% url 'pareja' %}">Parejas</a></li>
+                    </ul>
+              </div>          
             </div>
           </div>
         </nav>
@@ -109,11 +105,11 @@
             <form class="rd-mailform rd-mailform_style-1 form-shadow" method="post" action="{% url 'registrarPareja'%}">
               {% csrf_token %}  
               <div class="form-wrap form-wrap_icon linear-icon-man">
-                <input class="form-input" id="pareja1" type="text" name="pareja1" data-constraints="@Required"{{form.pareja1}}>
+                <input class="form-input" id="pareja1" type="text" name="pareja1" data-constraints="@Required"{{form.pareja1}}
                 <label class="form-label" for="pareja1">Nombre</label>
               </div>
               <div class="form-wrap form-wrap_icon linear-icon fa-gratipay">
-                <input class="form-input" id="pareja2" type="text" name="pareja2" data-constraints="@Required"{{form.pareja2}}>
+                <input class="form-input" id="pareja2" type="text" name="pareja2" data-constraints="@Required"{{form.pareja2}}
                 <label class="form-label" for="pareja2">Pareja</label>
               </div>
              

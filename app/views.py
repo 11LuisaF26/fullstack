@@ -16,28 +16,8 @@ from .forms import *
 
 # Index
 def index(request):
-    return render(request, "index.html")
-<<<<<<< HEAD
-def lugar(request):
-    return render(request,"Lugares.html")
-def pareja(request):
-    return render(request,"parejas.html")
-def pelea(request):
-    return render(request,"peleas.html")
-def caballero(request):
-    return render(request,"caballero.html")
-def registrarLugar(request):
-    return render(request,"Registro_Lugares.html")
-def registrarPecado(request):
-    return render(request,"Registro_Pecados.html")
-def registrarPelea(request):
-    return render(request,"Registro_Peleas.html")
-def registrarCaballero(request):
-    return render(request,"Registro_Caballeros.html")
-def registrarPareja(request):
-    return render(request,"Registro_Parejas.html")
-    
-=======
+    pecados_to_list = pecado.objects.all()
+    return render(request, "index.html",{"pecados": pecados_to_list})
 
 # Consultas
 def lugares(request):
@@ -92,27 +72,27 @@ def registroCaballeros(request):
             form = caballero_form()
     return render(request,"registroCaballeros.html", {'form':form})
 
-# def registrarPecado(request):
-#     form = caballero_form()
-#     if request.method == 'POST': # si el usuario está enviando el formulario con datos
-#         form = caballero_form(request.POST) # Bound form
-#         if form.is_valid():
-#             new_caballero = form.save() # Guardar los datos en la base de datos                              
+def registrarPecado(request):
+    form = pecado_form()
+    if request.method == 'POST': # si el usuario está enviando el formulario con datos
+        form = pecado_form(request.POST, request.FILES) # Bound form
+        if form.is_valid():
+            new_pecado = form.save() # Guardar los datos en la base de datos                              
             
-#         else:
-#             form = caballero_form()
-#     return render(request,"registroCaballeros.html", {'form':form})
+        else:
+            form = pecado_form()
+    return render(request,"registroPecados.html", {'form':form})
 
-# def registrarPelea(request):
-#     form = caballero_form()
-#     if request.method == 'POST': # si el usuario está enviando el formulario con datos
-#         form = caballero_form(request.POST) # Bound form
-#         if form.is_valid():
-#             new_caballero = form.save() # Guardar los datos en la base de datos                              
+def registrarPelea(request):
+    form = pelea_form()
+    if request.method == 'POST': # si el usuario está enviando el formulario con datos
+        form = pelea_form(request.POST) # Bound form
+        if form.is_valid():
+            new_pelea = form.save() # Guardar los datos en la base de datos                              
             
-#         else:
-#             form = caballero_form()
-#     return render(request,"registroCaballeros.html", {'form':form})
+        else:
+            form = pelea_form()
+    return render(request,"registro_Peleas.html", {'form':form})
 
 
 # Eliminar
@@ -128,6 +108,5 @@ def delete_lugar(request, id=0):
     p = lugar.objects.get(pk=id)
     p.delete()
     return render(request, 'Lugares.html')
->>>>>>> 918675d... Octubre 15
 
  

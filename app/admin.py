@@ -6,3 +6,5 @@ from .forms import *
 admin.site.register(pareja)
 admin.site.register(lugar)
 admin.site.register(caballero)
+admin.site.register(pelea)
+admin.site.register(pecado)

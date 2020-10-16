@@ -60,17 +60,17 @@
             <!-- RD Navbar Nav-->
             <div class="rd-navbar-nav-wrap rd-navbar-search_not-collapsable">
               <div class="rd-navbar-search_collapsable">
-                <ul class="rd-navbar-nav">
-                  <li><a href="{% url 'home' %}">Pecados Capitales</a>
-                  </li>
-                  <li><a href="{% url 'pelea' %}">Peleas</a>
-                  </li>
-                  <li><a href="{% url 'caballero' %}">Caballeros sacros</a>
-                  </li>
-                  <li><a href="{% url 'lugar' %}">Lugares</a>
-                  </li>
-                  <li><a href="{% url 'pareja' %}">Parejas</a></li>
-                </ul>
+                  <ul class="rd-navbar-nav">
+                      <li><a href="{% url 'home' %}">Pecados Capitales</a>
+                      </li>
+                      <li class="active"><a href="{% url 'pelea' %}">Peleas</a>
+                      </li>
+                      <li><a href="{% url 'caballero' %}">Caballeros sacros</a>
+                      </li>
+                      <li><a href="{% url 'lugar' %}">Lugares</a>
+                      </li>
+                      <li><a href="{% url 'pareja' %}">Parejas</a></li>
+                    </ul>
               </div>
             </div>
           </div>
@@ -103,12 +103,13 @@
 
             <!--FORMULARIO-->
             <form class="rd-mailform rd-mailform_style-1 form-shadow" method="post" action="">
+              {% csrf_token %}  
               <div class="form-wrap form-wrap_icon linear-icon-man">
-                <input class="form-input" id="peleador1" type="text" name="name" data-constraints="@Required">
+                <input class="form-input" id="peleador1" type="text" name="peleador1" data-constraints="@Required"{{form.peleador1}}
                 <label class="form-label" for="peleador1">Peleador 1</label>
               </div>
               <div class="form-wrap form-wrap_icon linear-icon fa-gratipay">
-                <input class="form-input" id="peleador2" type="text" name="name" data-constraints="@Required">
+                <input class="form-input" id="peleador2" type="text" name="peleador2" data-constraints="@Required"{{form.peleador2}}
                 <label class="form-label" for="peleador2">Peleador 2</label>
               </div>
              

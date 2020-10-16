@@ -48,23 +48,22 @@
               <div class="rd-navbar-panel rd-navbar-search-lg_collapsable">
                 <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                 <!-- RD Navbar Brand-->
-                <div class="rd-navbar-brand"><a class="brand-name" href="index.html"><img src="../static/images/Logo.png" alt="" width="50"/></a></div>
+                <div class="rd-navbar-brand"><a class="brand-name" href="index"><img src="../static/images/Logo.png" alt="" width="50"/></a></div>
               </div>
               <!-- RD Navbar Nav-->
               <div class="rd-navbar-nav-wrap rd-navbar-search_not-collapsable">
                 <div class="rd-navbar-search_collapsable">
-                  <ul class="rd-navbar-nav">
-                    <li><a href="index.html">Pecados Capitales</a>
-                    </li>
-                    <li class="active"><a href="caballeros.html">Caballeros Sacros</a>
-                    </li>
-                    <li><a href="peleas.html">Peleas</a>
-                    </li>
-                    <li><a href="lugares.html">Lugares</a>
-                    </li>
-                    <li><a href="parejas.html">Parejas</a>
-                    </li>
-                  </ul>
+                    <ul class="rd-navbar-nav">
+                        <li><a href="{% url 'home' %}">Pecados Capitales</a>
+                        </li>
+                        <li><a href="{% url 'pelea' %}">Peleas</a>
+                        </li>
+                        <li class="active"><a href="{% url 'caballero' %}">Caballeros sacros</a>
+                        </li>
+                        <li><a href="{% url 'lugar' %}">Lugares</a>
+                        </li>
+                        <li><a href="{% url 'pareja' %}">Parejas</a></li>
+                      </ul>
                 </div>
               </div>
             </div>
@@ -91,7 +90,7 @@
             <div class="swiper-slide-caption text-center context-dark">
               <h1 data-swiper-anime="{ &quot;animation&quot;: &quot;swiperContentStack&quot;, &quot;duration&quot;: 1000, &quot;delay&quot;: 500 }">Pecados Capitales</h1>
               <h3 data-swiper-anime="{ &quot;animation&quot;: &quot;swiperContentStack&quot;, &quot;duration&quot;: 1000, &quot;delay&quot;: 600 }">Conoce a los 7 Pecados</h3>
-              <div class="group-lg group-middle" data-swiper-anime="{ &quot;animation&quot;: &quot;swiperContentStack&quot;, &quot;duration&quot;: 1000, &quot;delay&quot;: 700 }"><a class="button button-primary button-shadow" href="index.html" data-custom-scroll-to="features">Ver los pecados</a></div>
+              <div class="group-lg group-middle" data-swiper-anime="{ &quot;animation&quot;: &quot;swiperContentStack&quot;, &quot;duration&quot;: 1000, &quot;delay&quot;: 700 }"><a class="button button-primary button-shadow" href="index" data-custom-scroll-to="features">Ver los pecados</a></div>
             </div>
           </div>
           <div class="swiper-slide">
@@ -108,7 +107,7 @@
                   <div class="col-lg-7">
                     <h2 data-swiper-anime="{ &quot;animation&quot;: &quot;swiperContentStack&quot;, &quot;duration&quot;: 1000, &quot;delay&quot;: 500 }">Peleas</h2>
                     <h5 class="text-width-2 block-centered" data-swiper-anime="{ &quot;animation&quot;: &quot;swiperContentStack&quot;, &quot;duration&quot;: 1000, &quot;delay&quot;: 600 }">Conoce las peleas ocurridas</h5>
-                    <div class="group-lg group-middle" data-swiper-anime="{ &quot;animation&quot;: &quot;swiperContentStack&quot;, &quot;duration&quot;: 1000, &quot;delay&quot;: 700 }"><a class="button button-black button-shadow" href="peleas.html" data-custom-scroll-to="features">Ver peleas</a></div>
+                    <div class="group-lg group-middle" data-swiper-anime="{ &quot;animation&quot;: &quot;swiperContentStack&quot;, &quot;duration&quot;: 1000, &quot;delay&quot;: 700 }"><a class="button button-black button-shadow" href="peleas" data-custom-scroll-to="features">Ver peleas</a></div>
                   </div>
                 </div>
               </div>
@@ -126,36 +125,36 @@
         <div class="container">
           <h4 class="heading-decorated">CABALLEROS SACROS</h4>
         </div>
-        <div class="container" align="center">
-          <table border="1">
-            <tr>
-              <th>Nombre</th>
-              <th>Rango</th>
-              <th>Poder</th>
-              <th>Foto</th>
-            </tr>
-            <tr>
-              <td>Hendrickson</td>
-              <td>Gran caballero sagrado</td>
-              <td>15810</td>
-              <td><img src="../static/images/hendrickson.png" width="200"/></td>
-            </tr>
-            <tr>
-              <td>Arden</td>
-              <td>Caballero sagrado</td>
-              <td>29480</td>
-              <td><img src="../static/images/arden.png" width="200"/></td>
-            </tr>
-            <tr>
-              <td>Andre</td>
-              <td>Aprendiz de caballero sagrado</td>
-              <td>10000</td>
-              <td><img src="../static/images/andre.png" width="200"/></td>
-            </tr>
-            </table>
-            <div class="group-lg group-middle" data-swiper-anime="{ &quot;animation&quot;: &quot;swiperContentStack&quot;, &quot;duration&quot;: 1000, &quot;delay&quot;: 700 }">
-              <a class="button button-black button-shadow" href="{% url 'registroCaballeros' %}">Registrar Caballeros</a>
-            </div>
+        <section class="section-md bg-default decor-text" data-content="Contact">
+          <div class="container text-center">
+              <div class="row">
+                  <div class="col-md-12  to-animate">
+                      <table class="table table-sm">
+                          <tr>
+                            <td>#</td>
+                            <th>Nombre</th>
+                            <th>Rango</th>
+                            <th>Poder</th>
+                            <th>Foto</th>
+                          </tr>
+                          {% for caballero in caballeros %}
+                          <tr> 
+                            <td>{{ forloop.counter }}</td>
+                            <td>{{caballero.nombre}} </td>
+                            <td>{{caballero.rango}} </td>                                            
+                            <td>{{caballero.poder}} </td>    
+                            {%if caballero.imagen != None%}
+                            <td><img src="{{caballero.imagen.url}}" width="100" height="100"> </td> 
+                            {% endif %}
+                          <tr>
+                          {% endfor %} 
+                          </table>
+                          <div class="group-lg group-middle" data-swiper-anime="{ &quot;animation&quot;: &quot;swiperContentStack&quot;, &quot;duration&quot;: 1000, &quot;delay&quot;: 700 }">
+                            <a class="button button-black button-shadow" href="{% url 'registroCaballeros' %}">Registrar Caballeros</a>
+                          </div>
+                    </div>
+              </div>
+          </div>        
         </div>
       </section>
       <footer class="footer-corporate bg-gray-darkest">

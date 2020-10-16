@@ -114,24 +114,13 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                {% for pelea in peleas %}
+                                <tr> 
+                                    <td>{{ forloop.counter }}</td>
+                                    <td>{{pelea.peleador1}} </td>
+                                    <td>{{pelea.peleador2}} </td>                                            
                                 <tr>
-                                    <th>1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    
-                                </tr>
-                                <tr>
-                                    <th>2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                   
-                                </tr>
-                                <tr>
-                                    <th>3</th>
-                                    <td>Larry </td>
-                                    <td>Bird</td>
-                                    
-                                </tr>
+                                {% endfor %}                                    
                             </tbody>
                         </table>
                         <a href="{% url 'registrarPelea' %}"><button class="button button-primary button-shadow"

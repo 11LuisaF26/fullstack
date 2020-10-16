@@ -39,3 +39,27 @@ class caballero(models.Model):
 
     def __str__(self):
         return self.nombre
+
+class pelea(models.Model):
+    peleador1 = models.CharField(blank=True, max_length=100, verbose_name='peleador1')
+    peleador2 = models.CharField(blank=True, max_length=100, verbose_name='peleador2')
+   
+    class Meta():
+        verbose_name = "pelea"
+        verbose_name_plural = "peleas"
+
+    def __str__(self):
+        return self.peleador1
+
+class pecado(models.Model):
+    nombre = models.CharField(blank=True, max_length=100, verbose_name='nombre')
+    pecado = models.CharField(blank=True, max_length=100, verbose_name='pecado')
+    poder = models.CharField(blank=True, max_length=100, verbose_name='poder')
+    imagen = models.FileField(blank=True, null=True, upload_to="media/")
+   
+    class Meta():
+        verbose_name = "pecado"
+        verbose_name_plural = "pecados"
+
+    def __str__(self):
+        return self.nombre
