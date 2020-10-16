@@ -101,12 +101,30 @@ def delete_pareja(request, id=0):
     form = pareja_form()  
     p = pareja.objects.get(pk=id)
     p.delete()
-    return render(request, 'parejas.html')
+    return render(request, 'parejas.html',{'form': form})
 
 def delete_lugar(request, id=0):        
     form = lugar_form()  
     p = lugar.objects.get(pk=id)
     p.delete()
-    return render(request, 'Lugares.html')
+    return render(request, 'Lugares.html',{'form': form})
+
+def delete_pecado(request, id=0):        
+    form = pecado_form()  
+    p = pecado.objects.get(pk=id)
+    p.delete()
+    return render(request, "index.html",{'form': form})
+
+def delete_caballero(request, id=0):        
+    form = caballero_form()  
+    p = caballero.objects.get(pk=id)
+    p.delete()
+    return render(request, "caballeros.html",{'form': form})
+
+def delete_pelea(request, id=0):          
+    form = pelea_form()  
+    p = pelea.objects.get(pk=id)
+    p.delete()
+    return render(request, "peleas.html",{'form': form})
 
  

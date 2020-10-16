@@ -21,5 +21,8 @@ urlpatterns = [
     # Eliminar
     re_path(r'^pareja/delete/(?P<id>\w+)/$', views.delete_pareja, name='eliminar_pareja'),
     re_path(r'^lugar/delete/(?P<id>\w+)/$', views.delete_lugar, name='eliminar_lugar'),
+    re_path(r'^delete/(?P<id>\w+)/$', views.delete_pecado, name='eliminar_pecado'),
+    re_path(r'^caballeros/delete/(?P<id>\w+)/$', views.delete_caballero, name='eliminar_caballero'),
+    re_path(r'^peleas/delete/(?P<id>\w+)/$', views.delete_pelea, name='eliminar_pelea'),
 ]
 
